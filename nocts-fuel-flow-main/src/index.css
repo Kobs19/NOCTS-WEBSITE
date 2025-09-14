@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* NOCTS Admin Dark Theme */
+    --background: 220 26% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 26% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 26% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Gold/Yellow Primary for fuel/activation buttons */
+    --primary: 45 93% 58%;
+    --primary-foreground: 220 26% 7%;
+    --primary-glow: 45 93% 68%;
+
+    /* Dark secondary for pump buttons */
+    --secondary: 220 20% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 220 20% 18%;
+
+    --muted: 220 20% 14%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 220 20% 14%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Red for logout/danger */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 14%;
+    --ring: 45 93% 58%;
+
+    --radius: 0.75rem;
+
+    /* Kiosk-specific design tokens */
+    --surface: 220 26% 12%;
+    --surface-elevated: 220 26% 15%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 217 91% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--surface)), hsl(var(--background)));
+    
+    /* Shadows */
+    --shadow-kiosk: 0 8px 32px -8px hsl(var(--primary) / 0.2);
+    --shadow-elevated: 0 4px 16px -4px hsl(220 26% 4% / 0.4);
+    
+    /* Transitions */
+    --transition-kiosk: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
